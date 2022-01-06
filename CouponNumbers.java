@@ -5,11 +5,11 @@ public class CouponNumbers {
     public static final int THIRD_COUPON_NUMBER = 327;
 
     public static void main(String[] args) {
-        generateRandomNumber1();
-        generateRandomNumber2();
-        generateRandomNumber3();
+        generateRandomNumber(FIRST_COUPON_NUMBER);
+        generateRandomNumber(SECOND_COUPON_NUMBER);
+        generateRandomNumber(THIRD_COUPON_NUMBER);
     }
-    static void generateRandomNumber1() {
+    static void generateRandomNumber(int FIRST_COUPON_NUMBER) {
         int randomNumber = 1;
         int count = 0;
         boolean flag = false;
@@ -22,42 +22,9 @@ public class CouponNumbers {
             }
         }
         if(flag == true) {
-            System.out.println("Yay!You got first the coupon number");
+            System.out.println("Yay!You got the coupon number");
             System.out.println("Number of iteration to find first coupon number: " + count);
         }
         System.out.println();
-    }static void generateRandomNumber2() {
-        int randomNumber = 1;
-        int count = 0;
-        boolean flag = false;
-        while (randomNumber > 0) {
-            count++;
-            randomNumber = (int) Math.floor(Math.random() * (SECOND_COUPON_NUMBER + 1)) + 1;
-            if (randomNumber == SECOND_COUPON_NUMBER) {
-                flag = true;
-                break;
-            }
-        }
-        if(flag == true) {
-            System.out.println("Yay!You got second the coupon number");
-            System.out.println("Number of iteration to find second coupon number: " + count);
-        }
-        System.out.println();
-    }static void generateRandomNumber3() {
-        int randomNumber = 1;
-        int count = 0;
-        boolean flag = false;
-        while (randomNumber > 0) {
-            count++;
-            randomNumber = (int) Math.floor(Math.random() * (THIRD_COUPON_NUMBER + 1)) + 1;
-            if (randomNumber == THIRD_COUPON_NUMBER) {
-                flag = true;
-                break;
-            }
-        }
-        if(flag == true) {
-            System.out.println("Yay!You got third the coupon number");
-            System.out.println("Number of iteration to find third coupon number: " + count);
-        }
     }
 }
